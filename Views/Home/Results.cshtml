@@ -1,0 +1,37 @@
+@{
+    ViewData["Result"] = "Result Page";
+}
+
+@model dynamic
+
+<div class="text-center">
+    <div class="w-75 d-block border container p-5 mt-5 shadow" action="results" method="post">
+        <div class="row justify-content-center">
+            <div class="p-3">
+                <ul class="nav nav-pills nav-fill justify-content-between">
+                    <li class="col-4">Name:</li>
+                    <li class="col-5">@Model.Name</li>
+                </ul>
+            </div>
+            <div class="p-3">
+                <ul class="nav nav-pills nav-fill justify-content-between">
+                    <li class="col-4">Dojo Location</li>
+                    <li class="col-5">@Model.Location</li>
+                </ul>
+            </div>
+            <div class="p-3">
+                <ul class="nav nav-pills nav-fill justify-content-between">
+                    <li class="col-4">Favorite Language:</li>
+                    <li class="col-5">@Model.Language</li>
+                </ul>
+            </div>
+            <div class="p-3">
+                <ul class="nav nav-pills nav-fill justify-content-between">
+                    <li class="col-4">Comment (optional):</li>
+                    <li class="col-5">@Model.Comment</li>
+                </ul>
+            </div>
+            <input onclick="Redirect();" id="backBtn" class="btn btn-primary d-flex w-25 shadow border-dark" type="submit" value="Go back">
+        </div>
+    </div>
+</div>

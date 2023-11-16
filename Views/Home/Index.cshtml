@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <form class="w-75 d-block border container p-5 mt-5 shadow" action="results" method="post">
+        <div class="row justify-content-end">
+            <div class="row justify-content-between p-3 ">
+                <label class="col-5" for="Name">Your Name:</label>
+                <input class="col-4" type="text" id="Name" name="Name">
+            </div>
+            <div class="row justify-content-between p-3">
+                <label class="col-5" for="Location">Dojo Location:</label>
+                @* <input class="col-4" type="text" id="Location" name="Location"> *@
+                <select class="col-4 p-2" name="Location" id="Location">
+                    <option value="Santiago">Santiago</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Florida">Florida</option>
+                    <option value="NewYork">New York</option>
+                </select>
+            </div>
+            <div class="row justify-content-between p-3">
+                <label class="col-5" for="Language">Favorite Language:</label>
+                @* <input class="col-4" type="text" id="Language" name="Language"> *@
+                <select class="col-4 p-2" name="Language" id="Language">
+                    <option value="C#">C#</option>
+                    <option value="Javascript">JavaScript</option>
+                    <option value="Nodejs">NodeJS</option>
+                    <option value="Python">Python</option>
+                </select>
+            </div>
+            <div class="row justify-content-between p-3">
+                <label class="row mb-3" for="Comment">Comment (optional):</label>
+                <textarea name="Comment" id="Comment" cols="30" rows="5"></textarea>
+            </div>
+            <input class="btn btn-primary d-flex w-25 shadow border-dark" type="submit" value="Submit">
+        </div>
+    </form>
+</div>
