@@ -17,14 +17,14 @@ public class HomeController : Controller
     {
         return View();
     }
-
+    // Crea metodo GET para poder llamar a la vista y sea renderizada
     [HttpGet("results")]
     public IActionResult Results()
     {
-
         return View();
     }
 
+    // Se crea metodo POST, para el envío de los datos del formulario a la ruta results, mediante Modelo Survey que contiene las propiedades requeridas que serán enviadas desde el formulario de la request.
     [HttpPost("results")]
     public IActionResult Result(Survey survey)
     {
@@ -32,7 +32,7 @@ public class HomeController : Controller
         {
             Name = survey.Name,
             Location = survey.Location,
-            Language = survey.Language, 
+            Language = survey.Language,
             Comment = survey.Comment
         };
         return View("Results", SurveyResponse);
